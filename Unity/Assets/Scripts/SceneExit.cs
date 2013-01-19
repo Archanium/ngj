@@ -3,7 +3,8 @@ using UnityEngine;
 public class SceneExit : MonoBehaviour
 {
     public bool allowMouseExit = false;
-    public string sceneName = string.Empty;
+    public bool allowTriggerExit = false;
+    public int sceneIndex = 0;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -22,11 +23,11 @@ public class SceneExit : MonoBehaviour
 
     private void LoadScene()
     {
-        if (string.IsNullOrEmpty(this.sceneName))
-        {
-            return;
-        }
-
-        Application.LoadLevel(this.sceneName);
+        var transform = Camera.mainCamera.transform;
+        transform.position = new Vector3(
+            this.sceneIndex * 1920,
+            transform.position.y,
+            transform.position.z
+            );
     }
 }

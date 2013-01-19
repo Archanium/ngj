@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Street Club Entrance/Street Club Entrance.unity
+  - enabled: 1
     path: Assets/MainMenuScene.unity
   - enabled: 1
     path: Assets/ScenePOC/ScenePOC.unity
