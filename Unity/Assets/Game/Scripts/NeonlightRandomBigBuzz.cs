@@ -34,9 +34,4 @@ public class NeonlightRandomBigBuzz : MonoBehaviour
         audioSource.Play();
         this.delay = this.minimumDelay;
     }
-
-    private void OnGUI()
-    {
-        GUILayout.Label(this.delay.ToString());
-    }
 }
