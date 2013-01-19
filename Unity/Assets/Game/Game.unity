@@ -1355,6 +1355,81 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1567493079}
   m_GameObject: {fileID: 1306390310}
   m_Mesh: {fileID: 4300000, guid: e7c1b1f28b317bb4aa3fb9b746581d6b, type: 2}
+--- !u!1 &1336046532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1336046534}
+  - 108: {fileID: 1336046533}
+  - 114: {fileID: 1336046535}
+  m_Layer: 0
+  m_Name: Entrance Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1336046533
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336046532}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.76999998
+  m_Range: 1080
+  m_SpotAngle: 80
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1336046534
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336046532}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: -702.139587, y: 395.82605, z: -55.600235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643672886}
+--- !u!114 &1336046535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336046532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c86e24743afae3479594712db7246d3, type: 3}
+  m_Name: 
+  range: 4
+  frequency: .0500000007
 --- !u!1001 &1374881510
 Prefab:
   m_ObjectHideFlags: 0
@@ -1814,6 +1889,7 @@ Transform:
   m_Children:
   - {fileID: 2090120885}
   - {fileID: 1008225020}
+  - {fileID: 1336046534}
   m_Father: {fileID: 0}
 --- !u!1 &1704146297
 GameObject:
