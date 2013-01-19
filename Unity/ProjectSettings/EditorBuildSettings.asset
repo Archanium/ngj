@@ -6,10 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Game.unity
+  - enabled: 1
     path: Assets/MainMenuScene.unity
   - enabled: 1
     path: Assets/ScenePOC/ScenePOC.unity
-  - enabled: 1
-    path: Assets/The Bar/The Bar.unity
-  - enabled: 1
-    path: Assets/Home/Home.unity
