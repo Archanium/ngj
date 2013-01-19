@@ -1,15 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpeechBubble.cs">
-    <Files>
-      <File FileName="Assets/Scripts/SceneExit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SpeechBubble.cs" Line="116" Column="59" />
-      <File FileName="Assets/Scripts/MovingObject.cs" Line="3" Column="26" />
-      <File FileName="Assets/Scripts/DisableMeshRenders.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RotateEffectCamera.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

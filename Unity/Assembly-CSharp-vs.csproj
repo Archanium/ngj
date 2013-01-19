@@ -44,13 +44,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EmptyNodeList.cs" />
      <Compile Include="Assets\Game\Scripts\FlickeringLight.cs" />
+     <Compile Include="Assets\Game\Scripts\ManageSceneAudioSource.cs" />
+     <Compile Include="Assets\Game\Scripts\NeonlightRandomBigBuzz.cs" />
      <Compile Include="Assets\Scripts\DisableMeshRenders.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MovingObject.cs" />
      <Compile Include="Assets\Scripts\RotateEffectCamera.cs" />
      <Compile Include="Assets\Scripts\SceneExit.cs" />
      <Compile Include="Assets\Scripts\SpeechBubble.cs" />
+     <None Include="Assets\Game\Street_club_entrance\Dialog\player_trigger_1.xml" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\bouncer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

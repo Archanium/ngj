@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
     <dialog first="true">
-        <text><![CDATA[You're not comming in again.]]></text>
+        <text><![CDATA[Is your name on the list?]]></text>
         <options>
-            <option>Fuck you</option>
-            <option><![CDATA[<silence>]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[I just#fucking came#from inside!]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[Go#FUCK#yourself!]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[#Bitch please#]]></option>
         </options>
     </dialog>
     <dialog>
-        <text><![CDATA[Go Home]]></text>
+        <text><![CDATA[Go be drunk elsewhere!]]></text>
         <options>
-            <option lose="true">Fuck you</option>
+            <!--<option lose="true">Fuck you</option>-->
             <option><![CDATA[<silence>]]></option>
         </options>
     </dialog>
