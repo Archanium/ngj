@@ -13,7 +13,7 @@ public class SceneExit : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!this.allowMouseExit)
+        if (!this.allowMouseExit || !this.allowTriggerExit)
         {
             return;
         }

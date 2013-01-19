@@ -73,10 +73,10 @@ MonoBehaviour:
   m_button:
     m_Name: button
     m_Normal:
-      m_Background: {fileID: 11006, guid: 0000000000000000e000000000000000, type: 0}
-      m_TextColor: {r: .899999976, g: .899999976, b: .899999976, a: 1}
+      m_Background: {fileID: 0}
+      m_TextColor: {r: .0671641827, g: .0596458055, b: .0596458055, a: 1}
     m_Hover:
-      m_Background: {fileID: 11003, guid: 0000000000000000e000000000000000, type: 0}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Active:
       m_Background: {fileID: 11002, guid: 0000000000000000e000000000000000, type: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 1
     m_ImagePosition: 2
@@ -1194,8 +1194,8 @@ MonoBehaviour:
   m_CustomStyles:
   - m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: b29e3875fe685754493a79b4115d5da1, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: 6f662a607cb284e7aa0c0b4147999341, type: 3}
+      m_TextColor: {r: .188235298, g: .298039228, b: .458823532, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1241,7 +1241,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -1249,10 +1249,10 @@ MonoBehaviour:
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
-    m_StretchHeight: 0
+    m_StretchHeight: 1
   m_Settings:
-    m_DoubleClickSelectsWord: 1
-    m_TripleClickSelectsLine: 1
+    m_DoubleClickSelectsWord: 0
+    m_TripleClickSelectsLine: 0
     m_CursorColor: {r: 1, g: 1, b: 1, a: 1}
     m_CursorFlashSpeed: -1
     m_SelectionColor: {r: 1, g: .384039074, b: 0, a: .699999988}
