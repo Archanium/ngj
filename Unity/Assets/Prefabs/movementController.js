@@ -4,23 +4,19 @@ function Start () {
 
 }
 
-var speed : float = 1000.0;
-var textureLeft : Texture2D;
-var textureRight : Texture2D;
- 
+var speed : float = 100.0;
+var rotation : float = 0;
+
 function Update() {
  	var horMovement = Input.GetAxis("Horizontal");
 
-	transform.Rotate(Mathf.Sin(Time.frameCount) * 15,0,0);
- 	 	
 	if (horMovement) {
-		if (horMovement > 0) {
-			this.renderer.sharedMaterial.mainTexture = textureRight;
-		}
-		
-		if (horMovement < 0) {			
-			this.renderer.sharedMaterial.mainTexture = textureLeft;
-		}
+		if (horMovement < 0) {
+			rotation = 180;
+		} else if (horMovement > 0) {
+			rotation = 0;
+		}		
 		transform.Translate(transform.right * horMovement * Time.deltaTime * speed);
 	}
+	transform.rotation = Quaternion.Euler((Time.frameCount * Time.deltaTime) % 10,rotation,0);
 }
