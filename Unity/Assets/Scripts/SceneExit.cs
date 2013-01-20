@@ -10,7 +10,6 @@ public class SceneExit : MonoBehaviour, IEventListener
 	
 	public bool HandleEvent(IEvent e) 
 	{
-		print (bool.TrueString == (e.GetData() as string));
 		if(bool.TrueString == e.GetData() as string) {
 			this.TransformCamera();
 			this.eM.QueueEvent(new FadeInEvent(3));
