@@ -96,8 +96,6 @@ public class SpeechBubble : MonoBehaviour
 	//Draw GUIs
 	void OnGUI()
 	{
-		print(time);
-		print(show);
 		if(show || (time + 3) > Time.time) {
 			//Begin the GUI group centering the speech bubble at the same position of this game object. After that, apply the offset
 			GUILayout.BeginArea(new Rect(goScreenPos.x-centerOffsetX-offsetX,Screen.height-goScreenPos.y-centerOffsetY-offsetY,bubbleWidth,bubbleHeight), guiSkin.customStyles[0]);
@@ -205,6 +203,14 @@ public class SpeechBubble : MonoBehaviour
 	{
 		this.show = true;
 		this.LoadData();
+	}
+	
+	void OnCollissionEnter(Collision collision) 
+	{
+	print("COLLISION!");
+		foreach (ContactPoint contact in collision.contacts) {
+            Debug.DrawRay(contact.point, contact.normal, Color.white);
+        }
 	}
 	
 	void OnTriggerExit(Collider hit)
