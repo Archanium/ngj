@@ -17,10 +17,9 @@ public class SceneExit : MonoBehaviour, IEventListener
 				this.MovePlayer();
 			}
 			this.eM.QueueEvent(new FadeInEvent(3));
-			
 		} else if (bool.FalseString == e.GetData() as string) {
-			
-			this.eM.DetachListener(this as IEventListener, "FadeEvent");	
+			this.eM.DetachListener(this as IEventListener, "FadeEvent");
+			this.eM.QueueEvent(new PlayerUnlockEvent());
 		}
 		return true;
 	}
@@ -39,6 +38,9 @@ public class SceneExit : MonoBehaviour, IEventListener
 				this.player.transform.position.y,
 				this.player.transform.position.z
 			);
+		
+		GameObject plane = GameObject.Find("player");
+		plane.transform.position = this.player.transform.position;
 	}
 	private void Start()
 	{
@@ -50,6 +52,7 @@ public class SceneExit : MonoBehaviour, IEventListener
     {
 		if (collider.tag == "Player" && this.allowTriggerExit) {
 			this.player = collider;
+			this.eM.QueueEvent(new PlayerLockEvent());
 			this.LoadScene();
 		}
     }

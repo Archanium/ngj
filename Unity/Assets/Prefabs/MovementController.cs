@@ -7,7 +7,8 @@ public class MovementController : MonoBehaviour, IEventListener {
 	public Texture[] textures;
 	public AudioClip[] footsteps;
 	
-	private float speed = 100f;
+	
+	private float speed = 550f;
 	private float rotation = 0f;
 	private int textureNumber = 0;
 	private int walkLoop = 0;
@@ -16,21 +17,25 @@ public class MovementController : MonoBehaviour, IEventListener {
 	private int idleLoopDelay = 0;
 	private float horMovement = 0f;
 	private int idleDir = 1;
-	private bool movable = true;
+	public bool movable = true;
 	
+	void Awake()
+	{
+		EventManager.instance.AddListener(this as IEventListener, "PlayerLockEvent");
+		EventManager.instance.AddListener(this as IEventListener, "PlayerUnlockEvent");	
+	}
 	// Use this for initialization
 	void Start () {
 		plane = GameObject.Find("player");
 		plane.transform.position = transform.position;
-		EventManager.instance.AddListener(this as IEventListener, "FadeEvent");
-		EventManager.instance.AddListener(this as IEventListener, "FadeOutEvent");
 	}
 	
 	bool IEventListener.HandleEvent(IEvent e)
 	{
-		if(e.GetName() == "FadeOutEvent") {
+		print(e.GetName());
+		if(e.GetName() == "PlayerLockEvent") {
 			this.movable = false;	
-		} else if (bool.FalseString == e.GetData() as string) {
+		} else if (e.GetName() == "PlayerUnlockEvent") {
 			this.movable = true;
 		}
 		return true;
@@ -39,9 +44,6 @@ public class MovementController : MonoBehaviour, IEventListener {
 	// Update is called once per frame
 	void Update () {
 		horMovement = Input.GetAxis("Horizontal");
-		if(!movable) {
-			return;
-		}
 		if (horMovement == 0) {
 			idleLoopDelay = idleLoopDelay + 1;
 			if (idleLoopDelay % 75 == 0) {
@@ -93,7 +95,10 @@ public class MovementController : MonoBehaviour, IEventListener {
 			textureNumber = 2;
 		}
 		if (textureNumber > 3) {
-			transform.Translate(transform.right * horMovement * Time.deltaTime * speed);
+			if(movable) {
+				transform.Translate(transform.right * horMovement * Time.deltaTime * speed);
+			}
+			
 			plane.transform.position = transform.position;
 		}
 		plane.renderer.sharedMaterial.mainTexture = textures[textureNumber];

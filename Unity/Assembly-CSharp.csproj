@@ -55,6 +55,9 @@
      <Compile Include="Assets\Game\Scripts\NeonlightRandomBigBuzz.cs" />
      <Compile Include="Assets\Game\Scripts\PlaceCamera.cs" />
      <Compile Include="Assets\Game\Scripts\Taxi.cs" />
+     <Compile Include="Assets\PlayerLockEvent.cs" />
+     <Compile Include="Assets\PlayerUnlockEvent.cs" />
+     <Compile Include="Assets\Prefabs\MovementController.cs" />
      <Compile Include="Assets\Scripts\DisableMeshRenders.cs" />
      <Compile Include="Assets\Scripts\DrunkFightAudio.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />

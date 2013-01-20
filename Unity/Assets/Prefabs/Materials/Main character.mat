@@ -15,7 +15,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 1dc116d64b06bc943b9505405d271c80, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -65,7 +65,7 @@ Material:
       data:
         first:
           name: _InvFade
-        second: .679403007
+        second: .00999999978
       data:
         first:
           name: _EmissionLM
@@ -93,8 +93,8 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
           name: _Emission
@@ -102,11 +102,11 @@ Material:
       data:
         first:
           name: _TintColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .874509811, g: .874509811, b: .874509811, a: 1}
       data:
         first:
-          name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 0}
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
       data:
         first:
           name: _TranslucencyColor

@@ -90,8 +90,9 @@ public class EventManager : MonoBehaviour
         ArrayList listenerList = m_listenerTable[eventName] as ArrayList;
         foreach (IEventListener listener in listenerList)
         {
-            if (listener.HandleEvent(evt))
-                return true; //Event consumed.
+            if (!listener.HandleEvent(evt))
+				return false;
+                //return true; //Event consumed.
         }
  
         return true;
