@@ -54,6 +54,7 @@
      <Compile Include="Assets\Game\Scripts\PlaceCamera.cs" />
      <Compile Include="Assets\Game\Scripts\Taxi.cs" />
      <Compile Include="Assets\Scripts\DisableMeshRenders.cs" />
+     <Compile Include="Assets\Scripts\DrunkFightAudio.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MovingObject.cs" />
      <Compile Include="Assets\Scripts\RotateEffectCamera.cs" />
