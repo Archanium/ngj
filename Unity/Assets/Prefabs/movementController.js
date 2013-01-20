@@ -10,9 +10,10 @@ var idleLoop : int;
 var idleLoopDelay : int;
 var horMovement : float;
 var idleDir : int;
+var footsteps : AudioClip[];
 
 function Start () {
-	speed = 50.0;
+	speed = 100.0;
 	rotation = 0;
 	walkLoop = 0;
 	walkLoopDelay = 0;
@@ -23,6 +24,11 @@ function Start () {
 	textureNumber = 0;
 	
 	plane.transform.position = transform.position;	
+}
+
+function playRandomSounds () {
+	audio.clip = footsteps[Random.Range(0,footsteps.length)];
+    audio.Play();
 }
 
 function Update() {
@@ -60,7 +66,11 @@ function Update() {
 			textureNumber = 2;
 		}
 		if (Mathf.Abs(horMovement) == 1) {
+			//Camera.main.orthographicSize = 256;    
 			walkLoopDelay = walkLoopDelay + 1;
+			if (walkLoop == 6 || walkLoop == 3) {
+				playRandomSounds();
+			}
 			if (walkLoopDelay % 25 == 0) {
 				walkLoop = walkLoop + 1;
 			}
@@ -70,12 +80,15 @@ function Update() {
 				walkLoopDelay = 0;
 			}
 		} else {
+			//Camera.main.orthographicSize = 768;
 			walkLoopDelay = 0;
 			walkLoop = 0;
 			textureNumber = 2;
 		}
-		transform.Translate(transform.right * horMovement * Time.deltaTime * speed);
-		plane.transform.position = transform.position;
+		if (textureNumber > 3) {
+			transform.Translate(transform.right * horMovement * Time.deltaTime * speed);
+			plane.transform.position = transform.position;
+		}
 	}
 	plane.renderer.sharedMaterial.mainTexture = textures[textureNumber];
 	plane.transform.rotation = Quaternion.Euler(0,rotation,0);
