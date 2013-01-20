@@ -3,9 +3,9 @@
     <dialog first="true">
         <text><![CDATA[Is your name on the list?]]></text>
         <options>
-            <option response="Get your drunk ass outta here"><![CDATA[I just#fucking came#from inside!]]></option>
-            <option response="Get your drunk ass outta here"><![CDATA[Go#FUCK#yourself!]]></option>
-            <option response="Get your drunk ass outta here"><![CDATA[#Bitch please#]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[I just fucking came from inside!]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[Go FUCK yourself!]]></option>
+            <option response="Get your drunk ass outta here"><![CDATA[Bitch please]]></option>
         </options>
     </dialog>
     <dialog>

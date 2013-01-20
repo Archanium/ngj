@@ -102,9 +102,8 @@ public class SpeechBubble : MonoBehaviour
 				GUILayout.BeginVertical();
 				//Render the text
 				GUILayout.Label(this.text, guiSkin.label);
-				GUILayout.BeginHorizontal();
 				for (int i = 0; i < this.currentOptions.Count; i++) {
-					if(GUILayout.Button( currentOptions[i].InnerText.Replace("#","\n"), GUILayout.Width ((bubbleWidth-20)/this.currentOptions.Count))) {
+					if(GUILayout.Button((i+1).ToString() + ". " + currentOptions[i].InnerText.Replace("#","\n"), guiSkin.button, GUILayout.Width ((bubbleWidth-20)))) {
 						first = false;
 						var lose = currentOptions[i].Attributes.GetNamedItem("lose");
 						var response = currentOptions[i].Attributes.GetNamedItem("response");
@@ -130,7 +129,6 @@ public class SpeechBubble : MonoBehaviour
 						time = -4;
 					} 
 				}
-				GUILayout.EndHorizontal();
 				GUILayout.EndVertical();
 			GUILayout.EndArea();
 			
@@ -171,33 +169,6 @@ public class SpeechBubble : MonoBehaviour
 			this.currentOptions = doc.SelectNodes("./options/option");
 		}	
 	}
-
-	//Called after camera has finished rendering the scene
-	void OnRenderObject()
-	{
-		if(show) {
-			//push current matrix into the matrix stack
-			GL.PushMatrix();
-			//set material pass
-			mat.SetPass(0);
-			//load orthogonal projection matrix
-			GL.LoadOrtho();
-			//a triangle primitive is going to be rendered
-			GL.Begin(GL.TRIANGLES);
-	
-				//set the color
-				GL.Color(Color.white);
-	
-				//Define the triangle vetices
-				GL.Vertex3(goViewportPos.x, goViewportPos.y+(triangleHeight/Screen.height)+triangleOffsetY, 0.1f);
-				GL.Vertex3(goViewportPos.x+triangleOffsetX - (triangleWidth/(float)Screen.width)/2, goViewportPos.y+offsetY/Screen.height, 0.1f);
-				GL.Vertex3(goViewportPos.x+triangleOffsetX + (triangleWidth/(float)Screen.width)/2, goViewportPos.y+offsetY/Screen.height, 0.1f);
-	
-			GL.End();
-			//pop the orthogonal matrix from the stack
-			GL.PopMatrix();
-		}
-	}
 	
 	void OnTriggerEnter(Collider hit) 
 	{
@@ -205,17 +176,12 @@ public class SpeechBubble : MonoBehaviour
 		this.LoadData();
 	}
 	
-	void OnCollissionEnter(Collision collision) 
-	{
-	print("COLLISION!");
-		foreach (ContactPoint contact in collision.contacts) {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
-        }
-	}
 	
 	void OnTriggerExit(Collider hit)
 	{
-		this.show = false;	
+		if(this.first) {
+			this.show = false;		
+		}
 		
 	}
 }
