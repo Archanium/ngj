@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+    <dialog first="true">
+        <text><![CDATA[You: Whoa! Sorry man!]]></text>
+    </dialog>
+	<dialog first="true">
+        <text><![CDATA[Cab driver: Are you in the need of a ride home fine gentleman?]]></text>
+        <options>
+            <option response="Get in."><![CDATA[Yus pl0x!]]></option>
+            <option response="Bugger off then. Fucking rat..."><![CDATA[No thanks.]]></option>
+        </options>
+    </dialog>
+</dialogs>

@@ -45,9 +45,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EmptyNodeList.cs" />
+     <Compile Include="Assets\Game\Scripts\FadeBetweenAudioSources.cs" />
      <Compile Include="Assets\Game\Scripts\FlickeringLight.cs" />
      <Compile Include="Assets\Game\Scripts\ManageSceneAudioSource.cs" />
+     <Compile Include="Assets\Game\Scripts\MeatOrgyJumping.cs" />
      <Compile Include="Assets\Game\Scripts\NeonlightRandomBigBuzz.cs" />
+     <Compile Include="Assets\Game\Scripts\PlaceCamera.cs" />
+     <Compile Include="Assets\Game\Scripts\Taxi.cs" />
      <Compile Include="Assets\Scripts\DisableMeshRenders.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MovingObject.cs" />
@@ -56,6 +60,9 @@
      <Compile Include="Assets\Scripts\SpeechBubble.cs" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\player_trigger_1.xml" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\bouncer.xml" />
+     <None Include="Assets\Game\street_taxi\killercabman.xml" />
+     <None Include="Assets\Game\home\crackwhore.xml" />
+     <None Include="Assets\Game\Street_club_entrance\Dialog\que_trigger_1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,12 +3,14 @@ using UnityEngine;
 public class SceneExit : MonoBehaviour
 {
     public bool allowMouseExit = false;
-    public bool allowTriggerExit = false;
+    public bool allowTriggerExit = true;
     public int sceneIndex = 0;
 
     private void OnTriggerEnter(Collider collider)
     {
-        this.LoadScene();
+		if (collider.tag == "Player" && this.allowTriggerExit) {
+			this.LoadScene();	
+		}
     }
 
     private void OnMouseDown()

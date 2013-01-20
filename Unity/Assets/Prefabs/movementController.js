@@ -10,7 +10,7 @@ var idleLoop : int;
 var idleLoopDelay : int;
 
 function Start () {
-	speed = 50.0;
+	//speed = 50.0;
 	rotation = 0;
 	walkLoop = 0;
 	walkLoopDelay = 0;
@@ -52,7 +52,9 @@ function Update() {
 		}
 		if (horMovement == 1 || horMovement == -1) {
 			if (walkLoopDelay == 0) {
-				this.audio.Play();
+				if(this.audio) {
+					this.audio.Play();
+				}
 			}
 			walkLoopDelay = walkLoopDelay + 1;
 			if (walkLoopDelay % 25 == 0) {

@@ -47,6 +47,9 @@
      <Compile Include="Assets\Editor\CreatePlane.cs" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\player_trigger_1.xml" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\bouncer.xml" />
+     <None Include="Assets\Game\street_taxi\killercabman.xml" />
+     <None Include="Assets\Game\home\crackwhore.xml" />
+     <None Include="Assets\Game\Street_club_entrance\Dialog\que_trigger_1.xml" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>

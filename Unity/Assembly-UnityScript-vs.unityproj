@@ -47,6 +47,9 @@
      <Compile Include="Assets\Prefabs\movementController.js" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\player_trigger_1.xml" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\bouncer.xml" />
+     <None Include="Assets\Game\street_taxi\killercabman.xml" />
+     <None Include="Assets\Game\home\crackwhore.xml" />
+     <None Include="Assets\Game\Street_club_entrance\Dialog\que_trigger_1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+    <dialog first="true">
+        <text><![CDATA[Beautiful woman: Hey swwtie! Your'e looking fine! Get your sweet ass over here.]]></text>
+        <options>
+            <option response="I thought you'd never ask!"><![CDATA[Hey!#Sexy!#Wanna come #home with me?]]></option>
+            <option response="Drunk rat..."><![CDATA[Thanks! (walk by and#ignore.]]></option>
+            <option response="Sure, let me see that pocket of yours (takes money)."><![CDATA[Can I join#you on that?#(take drugs)]]></option>
+        </options>
+    </dialog>
+</dialogs>

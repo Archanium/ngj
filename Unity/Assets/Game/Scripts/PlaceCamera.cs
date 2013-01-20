@@ -22,6 +22,5 @@ public class PlaceCamera : MonoBehaviour
         var size = Mathf.Round( ( ( this.desiredWidth / currentWidth ) * currentHeight ) / 2.0f );
         size -= size % 2.0f;
         targetCamera.orthographicSize = size;
-        Debug.Log(currentWidth + " " + currentHeight);
     }
 }

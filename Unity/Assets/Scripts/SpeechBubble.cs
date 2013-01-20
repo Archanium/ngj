@@ -96,6 +96,7 @@ public class SpeechBubble : MonoBehaviour
 	//Draw GUIs
 	void OnGUI()
 	{
+		print(time);
 		print(show);
 		if(show || (time + 3) > Time.time) {
 			//Begin the GUI group centering the speech bubble at the same position of this game object. After that, apply the offset
@@ -106,6 +107,7 @@ public class SpeechBubble : MonoBehaviour
 				GUILayout.BeginHorizontal();
 				for (int i = 0; i < this.currentOptions.Count; i++) {
 					if(GUILayout.Button( currentOptions[i].InnerText.Replace("#","\n"), GUILayout.Width ((bubbleWidth-20)/this.currentOptions.Count))) {
+						first = false;
 						var lose = currentOptions[i].Attributes.GetNamedItem("lose");
 						var response = currentOptions[i].Attributes.GetNamedItem("response");
 						print ("Loosing: " + (lose != null && lose.InnerText == "true"));
@@ -121,14 +123,19 @@ public class SpeechBubble : MonoBehaviour
 						show = false;
 					};
 				}
-				if (this.currentOptions.Count == 0 && GUILayout.Button("Ok")) {
-					show = false;
-					time = -4;
+				if (this.currentOptions.Count == 0) {
+					if (time == -4) {
+						time = Time.time;
+					} else if((time + 3) < Time.time) {
+						show = false;
+						first = false;
+						time = -4;
+					} 
 				}
 				GUILayout.EndHorizontal();
 				GUILayout.EndVertical();
 			GUILayout.EndArea();
-			first = false;
+			
 		} else {
 			time = -4;
 		}
@@ -164,7 +171,6 @@ public class SpeechBubble : MonoBehaviour
 			XmlNode textNode = doc.SelectSingleNode(selectString);
 			this.text = textNode.InnerText;
 			this.currentOptions = doc.SelectNodes("./options/option");
-			print(this.text);
 		}	
 	}
 

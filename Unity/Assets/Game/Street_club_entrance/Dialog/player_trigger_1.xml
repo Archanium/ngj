@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
     <dialog first="true">
-        <text><![CDATA[Shit, I forgot my jacket!
-            Maybe I should go fetch it.]]></text>
+        <text>
+<![CDATA[Shit, I forgot my jacket!
+Maybe I should go fetch it.]]>
+</text>
         <options>
             <option>Ok</option>
         </options>
