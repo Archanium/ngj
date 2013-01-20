@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: taxi_silhouette1
-  m_Shader: {fileID: 205, guid: 0000000000000000e000000000000000, type: 0}
+  m_Shader: {fileID: 30, guid: 0000000000000000e000000000000000, type: 0}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -15,9 +15,9 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: f1c17242910ed104fa26cc6b7dc51af7, type: 3}
-          m_Scale: {x: .5, y: .5}
-          m_Offset: {x: .0140000004, y: 0}
+          m_Texture: {fileID: 2800000, guid: af82c61a1bb7f0242b84bda56eb79436, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _TintColor

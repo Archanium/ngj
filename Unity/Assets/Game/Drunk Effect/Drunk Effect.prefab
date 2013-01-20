@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Render Texture 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +42,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 20: {fileID: 2000000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400006}
   m_Layer: 1
   m_Name: Effect Camera 2
   m_TagString: Untagged
@@ -59,7 +60,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Render Texture 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,6 +77,7 @@ GameObject:
   - 4: {fileID: 400008}
   - 20: {fileID: 2000002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 1
   m_Name: Effect Camera 1
   m_TagString: Untagged
@@ -90,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -105,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1920, y: 1080, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -127,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1920, y: 1080, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -159,10 +161,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1200
+  far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540
+  orthographic size: 768
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -187,10 +189,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1200
+  far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540
+  orthographic size: 768
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -270,6 +272,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a92967d3d5dfd647939fc657c22c7bb, type: 3}
   m_Name: 
   offset: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4594e7f2c6b3c7549ab1a2290ee6b96f, type: 3}
+  m_Name: 
+  desiredWidth: 1920
+  targetCamera: {fileID: 2000002}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4594e7f2c6b3c7549ab1a2290ee6b96f, type: 3}
+  m_Name: 
+  desiredWidth: 1920
+  targetCamera: {fileID: 2000000}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
