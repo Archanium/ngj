@@ -1,15 +1,15 @@
 #pragma strict
-var speed : float;
-var rotation : float;
+private var speed : float;
+private var rotation : float;
 var plane : GameObject;
 var textures : Texture[];
-var textureNumber : int;
-var walkLoop : int;
-var walkLoopDelay : int;
-var idleLoop : int;
-var idleLoopDelay : int;
-var horMovement : float;
-var idleDir : int;
+private var textureNumber : int;
+private var walkLoop : int;
+private var walkLoopDelay : int;
+private var idleLoop : int;
+private var idleLoopDelay : int;
+private var horMovement : float;
+private var idleDir : int;
 var footsteps : AudioClip[];
 
 function Start () {
