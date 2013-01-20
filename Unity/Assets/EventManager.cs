@@ -88,7 +88,8 @@ public class EventManager : MonoBehaviour
         }
  
         ArrayList listenerList = m_listenerTable[eventName] as ArrayList;
-        foreach (IEventListener listener in listenerList)
+		IEventListener[] listenerArray = listenerList.ToArray(typeof(IEventListener)) as IEventListener[];
+        foreach (IEventListener listener in listenerArray)
         {
             if (!listener.HandleEvent(evt))
 				return false;

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Prefabs\movementController.js" />
+     <Compile Include="Assets\TaxiFucker.js" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\player_trigger_1.xml" />
      <None Include="Assets\Game\Street_club_entrance\Dialog\bouncer.xml" />
      <None Include="Assets\Game\street_taxi\killercabman.xml" />

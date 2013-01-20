@@ -10,9 +10,10 @@
     </dialog>
     <dialog>
         <text><![CDATA[Go be drunk elsewhere!]]></text>
-        <options>
-            <!--<option lose="true">Fuck you</option>-->
-            <option><![CDATA[<silence>]]></option>
-        </options>
+        <!--<options>
+            <option scene="1" >Fuck you</option>
+            <option scene="2" >Fuck you</option>
+            <option scene="3" >Fuck you</option>
+        </options>-->
     </dialog>
 </dialogs>

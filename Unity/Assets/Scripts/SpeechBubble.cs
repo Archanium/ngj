@@ -42,6 +42,7 @@ public class SpeechBubble : MonoBehaviour
 	private XmlNodeList currentOptions;
 	private float time = -4;
 	public TextAsset xmlDefinition;
+	private string newScene;
 	
 
 	//use this for early initialization
@@ -103,19 +104,18 @@ public class SpeechBubble : MonoBehaviour
 				//Render the text
 				GUILayout.Label(this.text, guiSkin.label);
 				for (int i = 0; i < this.currentOptions.Count; i++) {
-					if(GUILayout.Button((i+1).ToString() + ". " + currentOptions[i].InnerText.Replace("#","\n"), guiSkin.button, GUILayout.Width ((bubbleWidth-20)))) {
+					if(GUILayout.Button((i+1).ToString() + ". " + currentOptions[i].InnerText.Replace("#","\n"), guiSkin.button, GUILayout.Width ((bubbleWidth-10)))) {
 						first = false;
-						var lose = currentOptions[i].Attributes.GetNamedItem("lose");
+						var scene = currentOptions[i].Attributes.GetNamedItem("scene");
 						var response = currentOptions[i].Attributes.GetNamedItem("response");
-						print ("Loosing: " + (lose != null && lose.InnerText == "true"));
-						if(lose != null && lose.InnerText == "true") {
-							Application.Quit();
-						}
 						if(response != null) {
 							this.text = response.InnerText;
 							this.currentOptions = new EmptyNodeList();
 							time = Time.time;
 							OnGUI();
+						}
+						if(scene != null) {
+							this.newScene = scene.InnerText;
 						}
 						show = false;
 					};
@@ -133,6 +133,10 @@ public class SpeechBubble : MonoBehaviour
 			GUILayout.EndArea();
 			
 		} else {
+			if(!string.IsNullOrEmpty (this.newScene)) {
+				EventManager.instance.QueueEvent(new SceneChangeEvent(this.newScene));
+				this.newScene = null;
+			}
 			time = -4;
 		}
 	}
@@ -175,7 +179,6 @@ public class SpeechBubble : MonoBehaviour
 		this.show = true;
 		this.LoadData();
 	}
-	
 	
 	void OnTriggerExit(Collider hit)
 	{
