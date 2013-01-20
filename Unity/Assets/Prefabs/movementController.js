@@ -3,6 +3,7 @@ private var speed : float;
 private var rotation : float;
 var plane : GameObject;
 var textures : Texture[];
+var movable : System.Boolean = true; 
 private var textureNumber : int;
 private var walkLoop : int;
 private var walkLoopDelay : int;
@@ -13,7 +14,7 @@ private var idleDir : int;
 var footsteps : AudioClip[];
 
 function Start () {
-	speed = 100.0;
+	speed = 600.0;
 	rotation = 0;
 	walkLoop = 0;
 	walkLoopDelay = 0;
@@ -33,7 +34,9 @@ function playRandomSounds () {
 
 function Update() {
 	horMovement = Input.GetAxis("Horizontal");
-
+	if(!movable) {
+		return;
+	}
 	if (horMovement == 0) {
 		idleLoopDelay = idleLoopDelay + 1;
 		if (idleLoopDelay % 75 == 0) {
