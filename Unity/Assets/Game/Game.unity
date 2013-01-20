@@ -364,6 +364,7 @@ MonoBehaviour:
   allowMouseExit: 1
   allowTriggerExit: 1
   sceneIndex: 2
+  player: {fileID: 0}
 --- !u!23 &106240277
 Renderer:
   m_ObjectHideFlags: 0
@@ -488,6 +489,7 @@ MonoBehaviour:
   allowMouseExit: 1
   allowTriggerExit: 1
   sceneIndex: 1
+  player: {fileID: 0}
 --- !u!1 &126271983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1601,7 @@ MonoBehaviour:
   allowMouseExit: 0
   allowTriggerExit: 0
   sceneIndex: 0
+  player: {fileID: 0}
 --- !u!1 &674573580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2297,7 @@ MonoBehaviour:
   allowMouseExit: 0
   allowTriggerExit: 0
   sceneIndex: 0
+  player: {fileID: 0}
 --- !u!23 &884425774
 Renderer:
   m_ObjectHideFlags: 0
@@ -2577,6 +2581,7 @@ MonoBehaviour:
   allowMouseExit: 1
   allowTriggerExit: 1
   sceneIndex: 1
+  player: {fileID: 0}
 --- !u!23 &1060768464
 Renderer:
   m_ObjectHideFlags: 0
@@ -3377,6 +3382,7 @@ MonoBehaviour:
   allowMouseExit: 1
   allowTriggerExit: 1
   sceneIndex: 0
+  player: {fileID: 0}
 --- !u!23 &1420549926
 Renderer:
   m_ObjectHideFlags: 0
@@ -3432,6 +3438,7 @@ GameObject:
   - 82: {fileID: 1430382919}
   - 82: {fileID: 1430382920}
   - 114: {fileID: 1430382921}
+  - 114: {fileID: 1430382922}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3628,6 +3635,16 @@ MonoBehaviour:
   m_Name: 
   desiredWidth: 1920
   targetCamera: {fileID: 1430382917}
+--- !u!114 &1430382922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430382913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c580dca98b19440fa6c27c13b095b73, type: 3}
+  m_Name: 
 --- !u!1 &1443457772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,7 +3825,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1561117234}
-  m_LocalRotation: {x: .273980111, y: -.65187031, z: -.65187031, w: .273980111}
+  m_LocalRotation: {x: .273980141, y: -.65187037, z: -.65187037, w: .273980141}
   m_LocalPosition: {x: -574.500916, y: 44.9591331, z: -55.6002007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
