@@ -40,6 +40,8 @@ public class SceneExit : MonoBehaviour, IEventListener
 			);
 		
 		GameObject plane = GameObject.Find("player");
+		
+		(GameObject.Find ("playerBox").GetComponent("MovementController") as MovementController).sceneOffset = this.sceneIndex;
 		plane.transform.position = this.player.transform.position;
 	}
 	private void Start()

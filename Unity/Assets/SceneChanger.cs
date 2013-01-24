@@ -4,7 +4,10 @@ using System.Collections;
 public class SceneChanger : MonoBehaviour, IEventListener
 {
 	private int index = 0;
-	private int lastScene = 3;
+	private int endSceneStart = 3;
+	private int endSceneEnd = 4;
+	private float delay = 5;
+	private bool shown = false;
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,7 +17,12 @@ public class SceneChanger : MonoBehaviour, IEventListener
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		if(index == endSceneStart && shown) {
+			delay -= Time.deltaTime;
+			if(delay < 0) {
+				EventManager.instance.QueueEvent(new SceneChangeEvent(endSceneEnd.ToString()));	
+			}
+		}
 	}
 	
 	bool IEventListener.HandleEvent(IEvent e) 
@@ -25,7 +33,7 @@ public class SceneChanger : MonoBehaviour, IEventListener
 			EventManager.instance.AddListener(this as IEventListener, "FadeEvent");
 			EventManager.instance.QueueEvent(new PlayerLockEvent());
 			EventManager.instance.QueueEvent(new FadeOutEvent(2));
-			if(index < lastScene) {
+			if(index < endSceneStart) {
 				this.TransformPlayer(this.index);
 			}
 			
@@ -37,6 +45,10 @@ public class SceneChanger : MonoBehaviour, IEventListener
 			} else if (bool.FalseString == e.GetData() as string) {
 				EventManager.instance.DetachListener(this as IEventListener, "FadeEvent");
 				EventManager.instance.QueueEvent(new PlayerUnlockEvent());
+				
+				if(index == endSceneStart) {
+					this.shown = true;
+				}
 			}
 		}
 		
@@ -51,6 +63,7 @@ public class SceneChanger : MonoBehaviour, IEventListener
 	            transform.position.y,
 	            transform.position.z
 	            );
+		(GameObject.Find ("playerBox").GetComponent("MovementController") as MovementController).sceneOffset = index;
 	}
 	
 	private void TransformPlayer(int index) 

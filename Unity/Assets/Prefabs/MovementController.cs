@@ -8,7 +8,7 @@ public class MovementController : MonoBehaviour, IEventListener {
 	public AudioClip[] footsteps;
 	
 	
-	private float speed = 550f;
+	private float speed = 100f;
 	private float rotation = 0f;
 	private int textureNumber = 0;
 	private int walkLoop = 0;
@@ -17,7 +17,10 @@ public class MovementController : MonoBehaviour, IEventListener {
 	private int idleLoopDelay = 0;
 	private float horMovement = 0f;
 	private int idleDir = 1;
+	public int sceneOffset = 0;
 	public bool movable = true;
+	private float desiredWidth;
+	
 	
 	void Awake()
 	{
@@ -103,6 +106,22 @@ public class MovementController : MonoBehaviour, IEventListener {
 		}
 		plane.renderer.sharedMaterial.mainTexture = textures[textureNumber];
 		plane.transform.rotation = Quaternion.Euler(0,rotation,0);
+		
+		desiredWidth = 1920f - (1920f - 1400f) * Mathf.Abs(horMovement);
+		var currentWidth = Screen.width;
+		var currentHeight = Screen.height;
+		var size = Mathf.Round( ( ( this.desiredWidth / currentWidth ) * currentHeight ) / 2.0f);
+		size -= size % 2.0f;
+		Camera.main.orthographicSize = size;
+		
+		Camera.main.transform.position = new Vector3(transform.position.x,Camera.main.transform.position.y,Camera.main.transform.position.z);
+		
+		if ((Camera.main.transform.position.x + 960 + desiredWidth/2) > (1920 * (sceneOffset + 1))) {
+			Camera.main.transform.position = new Vector3((960 - desiredWidth/2 + (1920 * sceneOffset)),Camera.main.transform.position.y,Camera.main.transform.position.z);
+		}
+		if ((Camera.main.transform.position.x + 960 - desiredWidth/2) < (1920 * (sceneOffset))) {
+			Camera.main.transform.position = new Vector3((desiredWidth/2 - 960 + (1920 * sceneOffset)),Camera.main.transform.position.y,Camera.main.transform.position.z);
+		}
 	}
 	
 	private void playRandomSounds () {
