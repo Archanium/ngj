@@ -4,6 +4,7 @@ public class ManageSceneAudioSource : MonoBehaviour
 {
     public Transform cameraTransformation;
     public float enableOnPositionX;
+    public SceneNames Scene;
     public AudioSource audioSource;
 
     private void Update()
@@ -20,7 +21,8 @@ public class ManageSceneAudioSource : MonoBehaviour
             return;
         }
 
-        var enabled = camera.position.x == this.enableOnPositionX;
+        //var enabled = camera.position.x == this.enableOnPositionX;
+        var enabled = SceneManager.CurrentScene == this.Scene;
         audioSource.enabled = enabled;
     }
 }

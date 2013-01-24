@@ -8,6 +8,11 @@ public class DrunkFightAudio : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        if (!this.enabled)
+        {
+            return;
+        }
+
         var drunksAudioSource = this.drunksAudioSource;
         if (drunksAudioSource == null)
         {

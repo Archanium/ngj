@@ -7,6 +7,7 @@ public class SceneExit : MonoBehaviour, IEventListener
     public int sceneIndex = 0;
 	public bool is_right = true;
 	public Collider player;
+    public SceneNames DestinationScene;
 	private EventManager eM;
 	
 	public bool HandleEvent(IEvent e) 
@@ -71,6 +72,7 @@ public class SceneExit : MonoBehaviour, IEventListener
 	
     private void LoadScene()
     {
+        SceneManager.CurrentScene = this.DestinationScene;
 		this.eM.AddListener(this as IEventListener, "FadeEvent");
 		this.eM.QueueEvent(new FadeOutEvent(2));
     }

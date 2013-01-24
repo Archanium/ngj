@@ -1,3 +1,4 @@
 .DS_Store
 Unity/Temp
 Unity/Library
+/Unity/*.suo
