@@ -43,6 +43,6 @@ public class CreepyTaxiDriverGuy : MonoBehaviour
 
 
         this.transform.position = new Vector3(position, this.transform.position.y, this.transform.position.z);
-        print(this.transform.position);
+        //print(this.transform.position);
     }
 }

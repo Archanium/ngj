@@ -10,7 +10,7 @@ public class SpeechBubble : MonoBehaviour
 	//the game object's position on the screen, in pixels
 	private Vector3 goScreenPos;
 	//the game objects position on the screen
-	private Vector3 goViewportPos;
+    //private Vector3 goViewportPos;
 
 	//the width of the speech bubble
 	public int bubbleWidth = 200;
@@ -89,7 +89,7 @@ public class SpeechBubble : MonoBehaviour
 		goScreenPos = Camera.main.WorldToScreenPoint(goTransform.position);	
 
 		//Could have used the following line, instead of lines 70 and 71
-		goViewportPos = Camera.main.WorldToViewportPoint(goTransform.position);
+		//goViewportPos = Camera.main.WorldToViewportPoint(goTransform.position);
 		//goViewportPos.x = goScreenPos.x/(float)Screen.width;
 		//goViewportPos.y = goScreenPos.y/(float)Screen.height;
 	}

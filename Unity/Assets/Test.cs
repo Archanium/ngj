@@ -15,7 +15,7 @@ public class Test : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision)
 	{
-		print(collision.collider.transform.position.ToString());
+		//print(collision.collider.transform.position.ToString());
 		collision.collider.transform.position = new Vector3(
 			collision.collider.transform.position.x+10,
 			collision.collider.transform.position.y,

@@ -349,7 +349,7 @@ MonoBehaviour:
   sceneIndex: 2
   is_right: 1
   player: {fileID: 0}
-  DestinationScene: 3
+  DestinationScene: -1
 --- !u!23 &106240277
 Renderer:
   m_ObjectHideFlags: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
   sceneIndex: 1
   is_right: 1
   player: {fileID: 0}
-  DestinationScene: 2
+  DestinationScene: 1
 --- !u!1 &126271983
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,11 +829,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: DestinationScene
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: DestinationScene
-      value: 3
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
@@ -1562,8 +1562,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 0
   Scene: 1
   audioSource: {fileID: 584844159}
 --- !u!1001 &593797493
@@ -1623,7 +1621,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: DestinationScene
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
+      propertyPath: DestinationScene
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
@@ -1866,8 +1868,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 0
   Scene: 1
   audioSource: {fileID: 653682090}
 --- !u!1 &654350449
@@ -1956,7 +1956,7 @@ MonoBehaviour:
   sceneIndex: 0
   is_right: 0
   player: {fileID: 0}
-  DestinationScene: 0
+  DestinationScene: -1
 --- !u!1 &672758694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,8 +3567,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 0
   Scene: 3
   audioSource: {fileID: 738474697}
 --- !u!1 &763835253
@@ -3670,8 +3668,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 1920
   Scene: 2
   audioSource: {fileID: 763835255}
 --- !u!1 &821076506
@@ -3809,8 +3805,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 1920
   Scene: 2
   audioSource: {fileID: 821076511}
 --- !u!1 &831329920
@@ -4184,7 +4178,7 @@ MonoBehaviour:
   sceneIndex: 0
   is_right: 1
   player: {fileID: 0}
-  DestinationScene: 0
+  DestinationScene: -1
 --- !u!23 &884425774
 Renderer:
   m_ObjectHideFlags: 0
@@ -4502,12 +4496,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a1698348dda6d44582b98bfbc60ece5, type: 3}
   m_Name: 
-  allowMouseExit: 1
-  allowTriggerExit: 1
+  allowMouseExit: 0
+  allowTriggerExit: 0
   sceneIndex: 1
   is_right: 0
   player: {fileID: 0}
-  DestinationScene: 2
+  DestinationScene: 1
 --- !u!23 &1060768464
 Renderer:
   m_ObjectHideFlags: 0
@@ -5327,11 +5321,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: allowMouseExit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: allowTriggerExit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: allowTriggerExit
@@ -5367,7 +5361,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
       propertyPath: DestinationScene
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
+      propertyPath: DestinationScene
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0d5b08bbd4cfee44b1442eac7dd0778, type: 2}
@@ -5420,7 +5418,7 @@ MonoBehaviour:
   sceneIndex: 0
   is_right: 0
   player: {fileID: 0}
-  DestinationScene: 1
+  DestinationScene: 0
 --- !u!23 &1420549926
 Renderer:
   m_ObjectHideFlags: 0
@@ -6653,8 +6651,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 0
   Scene: 1
   audioSource: {fileID: 1811558502}
 --- !u!82 &1811558502
@@ -6846,8 +6842,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  cameraTransformation: {fileID: 1430382918}
-  enableOnPositionX: 0
   Scene: 1
   audioSource: {fileID: 1912478978}
 --- !u!82 &1912478978

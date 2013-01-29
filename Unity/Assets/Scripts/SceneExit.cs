@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SceneExit : MonoBehaviour, IEventListener
+public class SceneExit : MonoBehaviour
 {
     public bool allowMouseExit = false;
     public bool allowTriggerExit = true;
@@ -10,21 +10,6 @@ public class SceneExit : MonoBehaviour, IEventListener
     public SceneNames DestinationScene;
 	private EventManager eM;
 	
-	public bool HandleEvent(IEvent e) 
-	{
-		if(bool.TrueString == e.GetData() as string) {
-			this.TransformCamera();
-			if(this.player) {
-				this.MovePlayer();
-			}
-			this.eM.QueueEvent(new FadeInEvent(3));
-		} else if (bool.FalseString == e.GetData() as string) {
-			this.eM.DetachListener(this as IEventListener, "FadeEvent");
-			this.eM.QueueEvent(new PlayerUnlockEvent());
-		}
-		return true;
-	}
-
 	private void MovePlayer()
 	{
 		var x = this.transform.position.x ;
@@ -72,9 +57,7 @@ public class SceneExit : MonoBehaviour, IEventListener
 	
     private void LoadScene()
     {
-        SceneManager.CurrentScene = this.DestinationScene;
-		this.eM.AddListener(this as IEventListener, "FadeEvent");
-		this.eM.QueueEvent(new FadeOutEvent(2));
+        this.eM.QueueEvent(new SceneChangeEvent((this.sceneIndex).ToString()));
     }
 	
 	private void TransformCamera() 

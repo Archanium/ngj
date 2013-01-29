@@ -29,7 +29,7 @@ public class SceneChanger : MonoBehaviour, IEventListener
 	{
 		if(e.GetName() == "SceneChangeEvent") {
 			this.index = int.Parse(e.GetData() as string);
-			print (this.index);
+			//print (this.index);
 			EventManager.instance.AddListener(this as IEventListener, "FadeEvent");
 			EventManager.instance.QueueEvent(new PlayerLockEvent());
 			EventManager.instance.QueueEvent(new FadeOutEvent(2));

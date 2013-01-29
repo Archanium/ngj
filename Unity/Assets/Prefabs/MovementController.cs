@@ -35,7 +35,7 @@ public class MovementController : MonoBehaviour, IEventListener {
 	
 	bool IEventListener.HandleEvent(IEvent e)
 	{
-		print(e.GetName());
+		//print(e.GetName());
 		if(e.GetName() == "PlayerLockEvent") {
 			this.movable = false;	
 		} else if (e.GetName() == "PlayerUnlockEvent") {
