@@ -6,4 +6,6 @@ public enum SceneNames
     StreetClub = 0,
     StreetTaxi = 1,
     StreetHome = 2,
+    Dawn1 = 3,
+    Dawn2  =4,
 }

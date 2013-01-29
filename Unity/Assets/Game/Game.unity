@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 1
+  Scene: 0
   audioSource: {fileID: 584844159}
 --- !u!1001 &593797493
 Prefab:
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 1
+  Scene: 0
   audioSource: {fileID: 653682090}
 --- !u!1 &654350449
 GameObject:
@@ -3481,8 +3481,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 738474696}
-  - 82: {fileID: 738474697}
   - 114: {fileID: 738474698}
+  - 82: {fileID: 738474697}
   m_Layer: 0
   m_Name: angel sound
   m_TagString: Untagged
@@ -3511,7 +3511,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 5175bae890b47404dba2e36b8fcde172, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .209999993
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3567,7 +3567,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 3
+  Scene: 2
   audioSource: {fileID: 738474697}
 --- !u!1 &763835253
 GameObject:
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 2
+  Scene: 1
   audioSource: {fileID: 763835255}
 --- !u!1 &821076506
 GameObject:
@@ -3680,8 +3680,8 @@ GameObject:
   - 4: {fileID: 821076507}
   - 33: {fileID: 821076509}
   - 23: {fileID: 821076508}
-  - 82: {fileID: 821076511}
   - 114: {fileID: 821076512}
+  - 82: {fileID: 821076511}
   - 114: {fileID: 821076510}
   m_Layer: 0
   m_Name: Taxi
@@ -3805,7 +3805,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 2
+  Scene: 1
   audioSource: {fileID: 821076511}
 --- !u!1 &831329920
 GameObject:
@@ -5554,11 +5554,11 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430382913}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: f621b3d99c6a4ce47bcf083f2535fff0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .395999998
+  m_Volume: .550000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6651,7 +6651,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 1
+  Scene: 0
   audioSource: {fileID: 1811558502}
 --- !u!82 &1811558502
 AudioSource:
@@ -6842,7 +6842,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1dd7de6e6e58ae448d41cddb9e85c78, type: 3}
   m_Name: 
-  Scene: 1
+  Scene: 0
   audioSource: {fileID: 1912478978}
 --- !u!82 &1912478978
 AudioSource:
@@ -6945,6 +6945,102 @@ AudioSource:
     m_Curve:
     - time: 0
       value: .468333364
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!1 &1915241235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1915241236}
+  - 114: {fileID: 1915241237}
+  - 82: {fileID: 1915241238}
+  m_Layer: 0
+  m_Name: End1And2Ambiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915241236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915241235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1915241237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915241235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d121f7ace4e828439c2473f87eaa563, type: 3}
+  m_Name: 
+  Scenes: 0300000004000000
+  audioSource: {fileID: 1915241238}
+--- !u!82 &1915241238
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915241235}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: c9d6bb8cb420e474ea82d1bb18266d67, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .699999988
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
