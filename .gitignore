@@ -2,3 +2,16 @@
 Unity/Temp
 Unity/Library
 /Unity/*.suo
+/Unity/*.csproj
+/Unity/*.csproj
+/Unity/*.csproj
+/Unity/obj
+/Unity/*.csproj
+/Unity/*.pidb
+/Unity/*.pidb
+/Unity/*.pidb
+/Unity/*.unityproj
+/Unity/*.unityproj
+/Unity/*.sln
+/Unity/*.sln
+/Unity/*.userprefs
