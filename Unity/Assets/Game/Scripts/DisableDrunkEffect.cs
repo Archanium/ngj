@@ -1,11 +1,8 @@
 using System;
-using System.Linq;
 using UnityEngine;
 
-public class ManageMultipleSceneAudioSource : MonoBehaviour, IEventListener
+public class DisableDrunkEffect : MonoBehaviour, IEventListener
 {
-    public SceneNames[] Scenes;
-    public AudioSource audioSource;
     private SceneNames currentScene = SceneNames.Menu;
 
     private void Awake()
@@ -15,15 +12,10 @@ public class ManageMultipleSceneAudioSource : MonoBehaviour, IEventListener
 
     private void Update()
     {
-        var audioSource = this.audioSource;
-        if( audioSource == null )
+        if (this.currentScene == SceneNames.Dawn1)
         {
-            return;
+            this.gameObject.SetActive(false);
         }
-
-        //Debug.Log(this.currentScene);
-        var enabled = this.Scenes.Any( s => s == this.currentScene );
-        audioSource.enabled = enabled;
     }
 
     public bool HandleEvent(IEvent @event)

@@ -8,7 +8,7 @@ public class NeonlightRandomBigBuzz : MonoBehaviour, IEventListener
     public float chanceOfPlay = 0.05f;
     public SceneNames playInScene;
 
-    private SceneNames currentScene = SceneNames.StreetClub;
+    private SceneNames currentScene = SceneNames.Menu;
     private float delay = 0.0f;
 
     private void Awake()

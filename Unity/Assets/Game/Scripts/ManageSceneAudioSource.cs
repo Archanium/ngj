@@ -5,7 +5,7 @@ public class ManageSceneAudioSource : MonoBehaviour, IEventListener
 {
     public SceneNames Scene;
     public AudioSource audioSource;
-    private SceneNames currentScene = SceneNames.StreetClub;
+    private SceneNames currentScene = SceneNames.Menu;
 
     private void Awake()
     {
